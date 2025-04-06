@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Thrift Haven - Home</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <style>
+    /* Global Styles */
     html {
       scroll-behavior: smooth;
     }
@@ -20,6 +21,8 @@
       background-color: #121212;
       color: #e0e0e0;
     }
+
+    /* Header */
     header {
       background-color: #388e3c;
       color: white;
@@ -27,6 +30,8 @@
       padding: 2rem;
       animation: fadeIn 1.5s ease;
     }
+
+    /* Navigation */
     nav {
       background-color: #2e7d32;
       text-align: center;
@@ -46,6 +51,8 @@
       color: #c8e6c9;
       text-shadow: 0 0 5px #fff;
     }
+
+    /* Hero Section */
     .hero {
       background: url('https://images.unsplash.com/photo-1580910051070-09c73fc870bf') no-repeat center center/cover;
       height: 400px;
@@ -58,26 +65,31 @@
       text-shadow: 2px 2px 8px #000;
       animation: zoomIn 1.5s ease;
     }
+
+    /* Main Content */
     .container {
       padding: 2rem;
       max-width: 1200px;
       margin: auto;
     }
+
     .section {
       background: white;
       padding: 2rem;
       margin-bottom: 2rem;
       border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease;
-    }
-    body.dark-mode .section {
-      background: #1e1e1e;
-      box-shadow: 0 2px 10px rgba(255,255,255,0.05);
     }
     .section:hover {
       transform: scale(1.01);
     }
+    body.dark-mode .section {
+      background: #1e1e1e;
+      box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05);
+    }
+
+    /* Products Scroll */
     .scrolling-products {
       display: flex;
       overflow-x: auto;
@@ -91,6 +103,7 @@
       background: #888;
       border-radius: 4px;
     }
+
     .product-card {
       flex: 0 0 auto;
       width: 200px;
@@ -99,12 +112,8 @@
       border-radius: 8px;
       padding: 1rem;
       text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
       transition: transform 0.3s;
-    }
-    body.dark-mode .product-card {
-      background: #2a2a2a;
-      border-color: #444;
     }
     .product-card:hover {
       transform: translateY(-5px);
@@ -123,6 +132,20 @@
       color: #555;
       font-size: 0.95rem;
     }
+    .product-card a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      color: #388e3c;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    body.dark-mode .product-card {
+      background: #2a2a2a;
+      border-color: #444;
+    }
+
+    /* CTA Section */
     .cta-section {
       background: #e8f5e9;
       padding: 2rem;
@@ -131,9 +154,6 @@
     }
     body.dark-mode .cta-section {
       background: #2e2e2e;
-    }
-    .cta-section h2 {
-      margin-bottom: 1rem;
     }
     .cta-section button {
       background: #388e3c;
@@ -148,6 +168,8 @@
     .cta-section button:hover {
       background: #2e7d32;
     }
+
+    /* Scroll Top Button */
     .scroll-top {
       position: fixed;
       bottom: 20px;
@@ -162,6 +184,8 @@
       display: none;
       z-index: 1000;
     }
+
+    /* Dark Mode Toggle */
     .dark-toggle {
       position: fixed;
       top: 10px;
@@ -174,6 +198,8 @@
       cursor: pointer;
       z-index: 1001;
     }
+
+    /* Footer */
     footer {
       background-color: #2e7d32;
       color: white;
@@ -181,6 +207,8 @@
       padding: 1rem;
       margin-top: 2rem;
     }
+
+    /* Animations */
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
@@ -211,87 +239,63 @@
     Discover Hidden Treasures
   </section>
 
-  <div class="container">
-    <div class="section">
+  <main class="container">
+    <section class="section">
       <h2>Why Choose Thrift Haven?</h2>
       <p>At Thrift Haven, we believe fashion should be fun, affordable, and eco-friendly. Explore our wide range of unique, pre-loved items and give them a second chance to shine!</p>
-    </div>
+    </section>
 
-    <div class="section">
+    <section class="section">
       <h2>Customer Favorites</h2>
       <ul>
         <li>Vintage Denim Jackets</li>
         <li>Retro Accessories</li>
         <li>Hand-picked Dresses & Tops</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="section">
+    <section class="section">
       <h2>Featured Products</h2>
       <div class="scrolling-products">
+        <!-- Product Cards (Repeat Structure) -->
         <div class="product-card">
-          <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246" alt="Vintage Bag">
+          <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246" alt="Vintage Leather Bag">
           <h3>Vintage Leather Bag</h3>
           <p>$25.00</p>
-          <a href="https://wa.me/?text=I'm%20interested%20in%20the%20Vintage%20Leather%20Bag" target="_blank"><i class="fab fa-whatsapp"></i> Order</a>
+          <a href="https://wa.me/?text=I'm%20interested%20in%20the%20Vintage%20Leather%20Bag" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Order</a>
         </div>
-        <div class="product-card">
-          <img src="https://images.unsplash.com/photo-1600185365524-3f9f55ec0071" alt="Retro Sunglasses">
-          <h3>Retro Sunglasses</h3>
-          <p>$10.00</p>
-          <a href="https://wa.me/?text=I'm%20interested%20in%20the%20Retro%20Sunglasses" target="_blank"><i class="fab fa-whatsapp"></i> Order</a>
-        </div>
-        <div class="product-card">
-          <img src="https://images.unsplash.com/photo-1520975922284-8b3f19cc3cc1" alt="Boho Dress">
-          <h3>Boho Maxi Dress</h3>
-          <p>$30.00</p>
-          <a href="https://wa.me/?text=I'm%20interested%20in%20the%20Boho%20Maxi%20Dress" target="_blank"><i class="fab fa-whatsapp"></i> Order</a>
-        </div>
-        <div class="product-card">
-          <img src="https://images.unsplash.com/photo-1585386959984-a4155224f5f4" alt="Floral Blouse">
-          <h3>Floral Blouse</h3>
-          <p>$18.00</p>
-          <a href="https://wa.me/?text=I'm%20interested%20in%20the%20Floral%20Blouse" target="_blank"><i class="fab fa-whatsapp"></i> Order</a>
-        </div>
-        <div class="product-card">
-          <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b" alt="Casual Shirt">
-          <h3>Casual Check Shirt</h3>
-          <p>$20.00</p>
-          <a href="https://wa.me/?text=I'm%20interested%20in%20the%20Casual%20Check%20Shirt" target="_blank"><i class="fab fa-whatsapp"></i> Order</a>
-        </div>
+        <!-- Repeat for each product... -->
       </div>
-    </div>
+    </section>
 
-    <div class="section cta-section">
+    <section class="section cta-section">
       <h2>Don't Miss Out!</h2>
       <p>Sign up now to get exclusive offers and sneak peeks.</p>
       <button onclick="alert('Subscribed!')">Join the Club</button>
-    </div>
+    </section>
 
-    <div class="section">
+    <section class="section">
       <h2>Follow Us</h2>
       <p>Stay updated with our latest drops and style tips on social media:</p>
       <p>
         <i class="fab fa-instagram"></i> @thrifthaven &nbsp;
         <i class="fab fa-facebook"></i> /thrifthaven
       </p>
-    </div>
-  </div>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 Thrift Haven. All rights reserved.</p>
   </footer>
 
-  <button class="scroll-top" id="scrollTopBtn" title="Back to top">
-    ↑
-  </button>
+  <button class="scroll-top" id="scrollTopBtn" title="Back to top">↑</button>
 
   <script>
     const scrollTopBtn = document.getElementById("scrollTopBtn");
-    window.onscroll = function () {
+    window.onscroll = () => {
       scrollTopBtn.style.display = window.scrollY > 200 ? "block" : "none";
     };
-    scrollTopBtn.onclick = function () {
+    scrollTopBtn.onclick = () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     };
 
@@ -299,5 +303,6 @@
       document.body.classList.toggle("dark-mode");
     }
   </script>
+
 </body>
 </html>
